@@ -118,6 +118,10 @@ describe('JSON5', () => {
                 // eslint-disable-next-line no-new-wrappers
                 assert.strictEqual(JSON5.stringify(new Number(-1.2)), '-1.2')
             })
+
+            it('stringifies bigint', () => {
+                assert.strictEqual(JSON5.stringify(9007199254740992n), '9007199254740992')
+            })
         })
 
         describe('strings', () => {

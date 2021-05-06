@@ -202,6 +202,18 @@ t.test('parse(text)', t => {
             'parses bare long hexadecimal number'
         )
 
+        t.strictSame(
+            JSON5.parse('9007199254740991'),
+            9007199254740991,
+            'parses max safe number'
+        )
+        
+        t.strictSame(
+            JSON5.parse('9007199254740992'),
+            9007199254740992n,
+            'parses bigint'
+        )
+
         t.end()
     })
 
