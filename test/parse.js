@@ -1,3 +1,4 @@
+/* eslint-disable */
 const assert = require('assert')
 const sinon = require('sinon')
 const JSON5 = require('../lib')
@@ -207,7 +208,6 @@ t.test('parse(text)', t => {
             9007199254740991,
             'parses max safe number'
         )
-        
         t.strictSame(
             JSON5.parse('9007199254740992'),
             9007199254740992n,

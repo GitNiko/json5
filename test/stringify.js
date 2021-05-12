@@ -120,7 +120,10 @@ describe('JSON5', () => {
             })
 
             it('stringifies bigint', () => {
+                /* eslint-disable */
                 assert.strictEqual(JSON5.stringify(9007199254740992n), '9007199254740992')
+                assert.strictEqual(JSON5.stringify({a: 9007199254740992n}), '{"a":9007199254740992}')
+                /* eslint-enable */
             })
         })
 
