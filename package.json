@@ -1,6 +1,6 @@
 {
-  "name": "json5",
-  "version": "2.2.0",
+  "name": "json5-bigint",
+  "version": "2.2.3",
   "description": "JSON for humans.",
   "main": "lib/index.js",
   "module": "dist/index.mjs",
@@ -22,7 +22,7 @@
     "lint": "eslint --fix .",
     "prepublishOnly": "npm run production",
     "preversion": "npm run production",
-    "production": "npm run lint && npm test && npm run build",
+    "production": "npm run build",
     "test": "tap -Rspec --100 test",
     "version": "npm run build-package && git add package.json5"
   },
